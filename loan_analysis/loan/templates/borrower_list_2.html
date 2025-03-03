@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Borrowers List</title>
+</head>
+<body>
+    <h2>Available Borrowers</h2>
+    <ul>
+        {% for borrower in borrowers %}
+            <li>
+                <a href="{% url 'chat_room' borrower.id %}">{{ borrower.username }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
